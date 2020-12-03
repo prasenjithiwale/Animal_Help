@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="288dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
 
-        <androidx.cardview.widget.CardView
+        app:cardCornerRadius="4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:src="https://i.pinimg.com/originals/2e/5c/2b/2e5c2b4a2c2b6aa67d692dabbaea8584.jpg" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/animal_names"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Animal Name"
@@ -26,5 +30,6 @@
             android:textSize="24sp"
             android:visibility="visible" />
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
